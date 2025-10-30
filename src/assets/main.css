@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Kiosk-specific styles */
+@layer components {
+  .kiosk-button {
+    @apply px-8 py-6 rounded-2xl font-bold text-2xl transition-all duration-200 transform active:scale-95 shadow-lg;
+  }
+  
+  .service-card {
+    @apply bg-white p-8 rounded-3xl shadow-xl cursor-pointer transition-all duration-300 hover:shadow-2xl hover:scale-105 active:scale-100;
+  }
+  
+  .service-card:hover {
+    @apply ring-4 ring-primary ring-opacity-50;
+  }
+}
+
+/* Remove user selection for touch screens */
+* {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+input {
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+}
